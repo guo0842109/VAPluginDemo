@@ -12,6 +12,7 @@ import android.content.ServiceConnection;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Build;
+import android.os.Environment;
 import android.os.IBinder;
 import android.os.Process;
 import android.provider.Settings;
@@ -65,8 +66,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void loadPlugin() {
-        File apk = getFileStreamPath(apkName);
-
+//        File apk = getFileStreamPath(apkName);
+        File apk = new File(Environment.getExternalStorageDirectory(), apkName);
         if (apk.exists()) {
             try {
                 PluginManager.getInstance(this).loadPlugin(apk);

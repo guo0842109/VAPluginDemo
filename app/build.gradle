@@ -5,7 +5,6 @@ apply plugin: 'com.didi.virtualapk.host'
 android {
 
     compileSdkVersion VERSION_COMPILE_SDK
-    buildToolsVersion VERSION_BUILD_TOOLS
 
     defaultConfig {
         applicationId "com.lilee.plugin.host"
@@ -47,6 +46,7 @@ android {
     lintOptions {
         abortOnError false
     }
+    buildToolsVersion '27.0.3'
 }
 
 dependencies {
